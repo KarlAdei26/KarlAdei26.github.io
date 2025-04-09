@@ -67,8 +67,10 @@
             color: var(--primary-accent);
         }
 
-        .ratio img {
-            object-fit: contain;
+        .card-img-top {
+            object-fit: cover;
+            width: 100%;
+            height: 200px; /* Fixed height to maintain aspect ratio */
         }
 
         .card-body {
@@ -126,14 +128,12 @@
     </nav>
 
     <div class="container py-5">
-        <h2 class="text-center mb-5">iPhone </h2>
+        <h2 class="text-center mb-5">iPhone</h2>
         <div class="row g-4 justify-content-center">
-
+            <!-- Repeat for each card -->
             <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow rounded-4 border-0 h-100">
-                    <div class="ratio ratio-4x3">
-                        <img src="iphone_15.png" class="card-img-top p-3" alt="iPhone 15">
-                    </div>
+                    <img src="iphone_15.png" class="card-img-top" alt="iPhone 15">
                     <div class="card-body">
                         <h5 class="card-title">iPhone 15</h5>
                         <ul class="list-unstyled mb-0">
@@ -149,9 +149,7 @@
 
             <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow rounded-4 border-0 h-100">
-                    <div class="ratio ratio-4x3">
-                        <img src="iphone_16.png" class="card-img-top p-3" alt="iPhone 16">
-                    </div>
+                    <img src="iphone_16.png" class="card-img-top" alt="iPhone 16">
                     <div class="card-body">
                         <h5 class="card-title">iPhone 16</h5>
                         <ul class="list-unstyled mb-0">
@@ -167,9 +165,7 @@
 
             <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow rounded-4 border-0 h-100">
-                    <div class="ratio ratio-4x3">
-                        <img src="iphone_16e.png" class="card-img-top p-3" alt="iPhone 16e">
-                    </div>
+                    <img src="iphone_16e.png" class="card-img-top" alt="iPhone 16e">
                     <div class="card-body">
                         <h5 class="card-title">iPhone 16e</h5>
                         <ul class="list-unstyled mb-0">
@@ -185,9 +181,7 @@
 
             <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="card shadow rounded-4 border-0 h-100">
-                    <div class="ratio ratio-4x3">
-                        <img src="iphone_16pro.png" class="card-img-top p-3" alt="iPhone 16 Pro">
-                    </div>
+                    <img src="iphone_16pro.png" class="card-img-top" alt="iPhone 16 Pro">
                     <div class="card-body">
                         <h5 class="card-title">iPhone 16 Pro</h5>
                         <ul class="list-unstyled mb-0">
