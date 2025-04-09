@@ -59,7 +59,7 @@
             margin-bottom: 0;
         }
 
-        .row>.col-md-4 {
+        .row > .col-md-4 {
             margin-bottom: 30px;
         }
 
@@ -81,6 +81,30 @@
         h2 {
             font-weight: 600;
         }
+
+        /* Responsive card layout */
+        .profile-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 767px) {
+            .profile-card {
+                padding: 15px;
+            }
+
+            .profile-name {
+                font-size: 1.25rem;
+            }
+
+            .profile-bio {
+                font-size: 0.9rem;
+            }
+
+            .btn-project {
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 
@@ -89,7 +113,6 @@
     <div class="container mb-5">
         <h2 class="text-white text-center mb-4">My Portfolio</h2>
         <div class="row justify-content-center">
-
             <div class="col-md-4">
                 <div class="profile-card">
                     <img src="styles/guitar.jpg" alt="About Me" class="card-image">
@@ -102,8 +125,7 @@
                 <div class="profile-card">
                     <img src="styles/profilepic.jpg" alt="Karl Andrei" class="profile-image">
                     <div class="profile-name">Karl Andrei</div>
-                    <p class="profile-bio">Hello, I am Karl Andrei M. Mendoza from DIT 2-1. Welcome to my personal
-                        website.</p>
+                    <p class="profile-bio">Hello, I am Karl Andrei M. Mendoza from DIT 2-1. Welcome to my personal website.</p>
                 </div>
             </div>
 
@@ -114,14 +136,12 @@
                     <p class="profile-bio">Meow!</p>
                 </div>
             </div>
-
         </div>
     </div>
 
     <div class="container">
         <h2 class="text-white text-center mb-4">My Website Works</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
             <div class="col">
                 <div class="profile-card d-flex flex-column justify-content-between">
                     <img src="styles/Screenshot 2025-04-09 184604.png" alt="Project 1" class="card-image">
