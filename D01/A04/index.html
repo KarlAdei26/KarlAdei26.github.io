@@ -4,169 +4,208 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Karl Andrei - Portfolio</title>
+    <title>iPhone Showcase</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-light: #D9D7D3;
+            --primary-dark: #5C5A58;
+            --primary-accent: #3F3D3B;
+            --card-bg: #FFFFFF;
+            --navbar-bg: #1f1e1d;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #5C88A3;
-            padding: 40px 0;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .profile-card {
-            max-width: 100%;
-            text-align: center;
-            padding: 25px;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            background-color: #F9FAFB;
-            height: 100%;
+        .navbar {
+            background-color: var(--navbar-bg);
         }
 
-            .card-img-top {
-                object-fit: contain;
-                width: 100%;
-                height: 300px;
-                background-color: #f8f8f8;
-                padding: 1rem;
-            }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            border: 4px solid #dee2e6;
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
         }
 
-        .profile-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #212529;
-        }
-
-        .profile-title {
-            color: #5C88A3;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .profile-bio {
-            color: #141617;
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
-        .row>.col-md-4 {
-            margin-bottom: 30px;
-        }
-
-        .btn-project {
-            background-color: #0a1b3c;
-            color: #ffffff;
-            border: none;
-            padding: 8px 16px;
-            font-weight: 500;
-            border-radius: 25px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-project:hover {
-            background-color: #ffffff;
-            color: #000;
+        .nav-link.active,
+        .nav-link:hover {
+            color: var(--primary-light) !important;
         }
 
         h2 {
+            color: #4A4238;
+            font-size: 2.5rem;
             font-weight: 600;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            color: var(--primary-accent);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .card-body ul li {
+            color: var(--primary-dark);
+            font-size: 1rem;
+        }
+
+        .card-body ul li strong {
+            color: var(--primary-accent);
+        }
+
+        .ratio img {
+            object-fit: contain;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .container {
+            padding: 4rem 0;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #3b2c1f;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container mb-5">
-        <h2 class="text-white text-center mb-4">My Portfolio</h2>
-        <div class="row justify-content-center">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">iPhone Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Models</a>
+                    <a class="nav-link" href="#">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-            <div class="col-md-4">
-                <div class="profile-card">
-                    <img src="styles/guitar.jpg" alt="About Me" class="card-image">
-                    <div class="profile-name">I Love Guitars</div>
-                    <p class="profile-bio">Playing guitar is my hobby and my talent.</p>
+    <div class="container py-5">
+        <h2 class="text-center mb-5">iPhone </h2>
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card shadow rounded-4 border-0 h-100">
+                    <div class="ratio ratio-4x3">
+                        <img src="iphone_15.png" class="card-img-top p-3" alt="iPhone 15">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 15</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Storage:</strong> 128GB</li>
+                            <li><strong>Color:</strong> Pink</li>
+                            <li><strong>Display:</strong> Super Retina XDR</li>
+                            <li><strong>Chip:</strong> A16 Bionic</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">View More Details</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="profile-card">
-                    <img src="styles/profilepic.jpg" alt="Karl Andrei" class="profile-image">
-                    <div class="profile-name">Karl Andrei</div>
-                    <p class="profile-bio">Hello, I am Karl Andrei M. Mendoza from DIT 2-1. Welcome to my personal
-                        website.</p>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card shadow rounded-4 border-0 h-100">
+                    <div class="ratio ratio-4x3">
+                        <img src="iphone_16.png" class="card-img-top p-3" alt="iPhone 16">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 16</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Storage:</strong> 128GB</li>
+                            <li><strong>Color:</strong> Ultramarine</li>
+                            <li><strong>Display:</strong> Super Retina XDR</li>
+                            <li><strong>Chip:</strong> A18 Chip</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">View More Details</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="profile-card">
-                    <img src="styles/cat.jpg" alt="My Projects" class="card-image">
-                    <div class="profile-name">I am a Cat Parent</div>
-                    <p class="profile-bio">Meow!</p>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card shadow rounded-4 border-0 h-100">
+                    <div class="ratio ratio-4x3">
+                        <img src="iphone_16e.png" class="card-img-top p-3" alt="iPhone 16e">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 16e</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Storage:</strong> 128GB</li>
+                            <li><strong>Color:</strong> White</li>
+                            <li><strong>Display:</strong> Super Retina XDR</li>
+                            <li><strong>Chip:</strong> A18 Chip</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">View More Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card shadow rounded-4 border-0 h-100">
+                    <div class="ratio ratio-4x3">
+                        <img src="iphone_16pro.png" class="card-img-top p-3" alt="iPhone 16 Pro">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 16 Pro</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Storage:</strong> 128GB</li>
+                            <li><strong>Color:</strong> Desert Titanium</li>
+                            <li><strong>Display:</strong> Super Retina XDR</li>
+                            <li><strong>Chip:</strong> A18 Pro Chip</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">View More Details</button>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="text-white text-center mb-4">My Website Works</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
-            <div class="col">
-                <div class="profile-card d-flex flex-column justify-content-between">
-                    <img src="styles/Screenshot 2025-04-09 184604.png" alt="Project 1" class="card-image">
-                    <div>
-                        <div class="profile-name">iPhone Gallery</div>
-                        <p class="profile-bio">Activity 4</p>
-                    </div>
-                    <a href="A04/index.html" class="btn btn-project mt-3">View Project</a>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="profile-card d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="profile-name"></div>
-                        <p class="profile-bio"></p>
-                    </div>
-                    <a href="https://example.com/project2" class="btn btn-project mt-3">No Projects for now</a>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="profile-card d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="profile-name"></div>
-                        <p class="profile-bio"></p>
-                    </div>
-                    <a href="https://example.com/project3" class="btn btn-project mt-3">No Projects for now</a>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="profile-card d-flex flex-column justify-content-between">
-                    <div>
-                        <div class="profile-name"></div>
-                        <p class="profile-bio"></p>
-                    </div>
-                    <a href="https://example.com/project4" class="btn btn-project mt-3">No Projects for now</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
