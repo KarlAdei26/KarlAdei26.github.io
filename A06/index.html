@@ -12,12 +12,7 @@
             color: black;
             border: 2px solid black;
             transition: all 0.3s ease;
-        }
-
-        .btn-outline-black:hover {
-            background-color: black;
-            color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: transparent;
         }
 
         .fixed-img {
@@ -35,10 +30,8 @@
         </div>
     </div>
 
-
     <div class="container my-3">
-        <div class="row" id="container-row-1">
-        </div>
+        <div class="row" id="container-row-1"></div>
     </div>
 
     <div class="container-fluid p-5 mb-3" style="background-color: #7773aa; color: white">
@@ -48,23 +41,21 @@
     </div>
 
     <div class="container my-3">
-        <div class="row" id="container-row-2">
-        </div>
+        <div class="row" id="container-row-2"></div>
     </div>
 
     <script>
         var titles1 = ["(≧◡≦)", "(〃＾▽＾〃)", "(｡♥‿♥｡)", "(*≧ω≦)"];
         var pictures1 = ["elipot1.jpg", "elipot2.jpg", "elipot5.jpg", "elipot4.jpg"];
 
-        var titles2 = ["First Pic w/her", "Life4Cuts", "Spontyyyy", "Sponty Again", "Wahhh The Best", "(＾▽＾)", "Mwehehe", "OOOOPSSS!!!!"
-        ];
+        var titles2 = ["First Pic w/her", "Life4Cuts", "Spontyyyy", "Sponty Again", "Wahhh The Best", "(＾▽＾)", "Mwehehe", "OOOOPSSS!!!!"];
         var pictures2 = ["witheli1.jpg", "witheli2.jpg", "witheli3.jpg", "witheli4.jpg", "witheli5.jpg", "witheli6.jpg", "witheli7 (1).jpg", "witheli8.jpg"];
 
         var row1 = document.getElementById("container-row-1");
         var row2 = document.getElementById("container-row-2");
 
         for (var i = 0; i < titles1.length; i++) {
-            var cardHTML =
+            row1.innerHTML +=
                 '<div class="col-12 col-sm-6 col-md-4 col-lg-3">' +
                 '<div class="card my-3 shadow rounded overflow-hidden border-0">' +
                 '<div class="zoom-container">' +
@@ -72,15 +63,17 @@
                 '</div>' +
                 '<div class="card-body">' +
                 '<h5 class="card-title">' + titles1[i] + '</h5>' +
-                '<a href="#" class="btn btn-outline-black rounded-pill mt-3" target="_blank">View Image</a>' +
+                '<a href="#" class="btn btn-outline-black rounded-pill mt-3"' +
+                ' onmouseover="inquireMouseEnter(this)"' +
+                ' onmouseout="inquireMouseLeave(this)"' +
+                ' target="_blank">View Image</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
-            row1.insertAdjacentHTML('beforeend', cardHTML);
         }
 
         for (var i = 0; i < titles2.length; i++) {
-            var cardHTML =
+            row2.innerHTML +=
                 '<div class="col-12 col-sm-6 col-md-4 col-lg-3">' +
                 '<div class="card my-3 shadow rounded overflow-hidden border-0">' +
                 '<div class="zoom-container">' +
@@ -88,11 +81,27 @@
                 '</div>' +
                 '<div class="card-body">' +
                 '<h5 class="card-title">' + titles2[i] + '</h5>' +
-                '<a href="#" class="btn btn-outline-black rounded-pill mt-3" target="_blank">View Image</a>' +
+                '<a href="#" class="btn btn-outline-black rounded-pill mt-3"' +
+                ' onmouseover="inquireMouseEnter(this)"' +
+                ' onmouseout="inquireMouseLeave(this)"' +
+                ' target="_blank">View Image</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
-            row2.insertAdjacentHTML('beforeend', cardHTML);
+        }
+    </script>
+
+    <script>
+        function inquireMouseEnter(button) {
+            button.style.backgroundColor = "black";
+            button.style.color = "white";
+            button.classList.add("shadow");
+        }
+
+        function inquireMouseLeave(button) {
+            button.style.backgroundColor = "transparent";
+            button.style.color = "black";
+            button.classList.remove("shadow");
         }
     </script>
 
