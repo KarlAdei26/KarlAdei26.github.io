@@ -1,74 +1,92 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Athletics</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #121212;
-      color: #E5E7EB; /* main text color same as main page */
-    }
-    .container { max-width: 420px; margin: auto; padding: 20px; }
-    .accent { color: #C9A24D; } /* gold accent matching main page */
-    .card { background: #2A2A2A; border: none; margin-bottom: 20px; }
-    .card img { height: 200px; object-fit: cover; filter: grayscale(20%); }
-    small { color: #9CA3AF; } /* secondary text */
-    .section { background: #1E1E1E; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Athletics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #121212;
+            color: #E5E7EB;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-container {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .accent {
+            color: #C9A24D;
+        }
+
+        .card {
+            background: #2A2A2A;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            border-radius: 12px;
+        }
+
+        .section {
+            background: #1E1E1E;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        small {
+            color: #9CA3AF;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container text-center">
-  <h2 class="accent">Athletics</h2>
-  <p><small>Focus on improving your speed, endurance, and technique with these practical steps.</small></p>
+    <div class="app-container container">
 
-  <!-- Single Improvement Card -->
-  <div class="card shadow-sm">
-    <img src="Athletics.jpg" alt="Athletics Training" class="img-fluid">
-    <div class="card-body text-start">
-      <h5 class="accent">Steps to Improve</h5>
-      <small>
-        1. Warm up properly before training to prevent injuries.<br>
-        2. Incorporate interval sprints and long-distance runs.<br>
-        3. Add strength training: squats, lunges, core exercises.<br>
-        4. Track your times and gradually increase intensity.<br>
-        5. Include recovery days and monitor your nutrition.<br>
-        6. Focus on running form and breathing techniques for efficiency.
-      </small>
+        <div class="text-center mb-4">
+            <h2 class="accent">Athletics</h2>
+            <small>Focus on speed, endurance, and technique.</small>
+        </div>
+
+        <div class="card shadow-sm">
+            <img src="Athletics.jpg" class="img-fluid" alt="Athletics">
+            <div class="card-body">
+                <h5 class="accent">Steps to Improve</h5>
+                <small class="d-block">
+                    • Warm up properly<br>
+                    • Sprint & distance training<br>
+                    • Strength training<br>
+                    • Track performance<br>
+                    • Include recovery & nutrition
+                </small>
+            </div>
+        </div>
+
+        <div class="section">
+            <h5 class="accent">Daily Tips</h5>
+            <small>Stay consistent, monitor form, and respect recovery days.</small>
+        </div>
+
+        <div class="section">
+            <h5 class="accent">Mindset</h5>
+            <small>Small improvements daily lead to big results.</small>
+        </div>
+
     </div>
-  </div>
 
-  <!-- Extra Content to Fill the Screen -->
-  <div class="section text-start">
-    <h5 class="accent">Daily Tips</h5>
-    <small>
-      • Keep a training log to monitor progress.<br>
-      • Stay hydrated before, during, and after workouts.<br>
-      • Mix up workouts to prevent plateaus and keep it fun.<br>
-      • Practice mindfulness to improve focus and performance.
-    </small>
-  </div>
-
-  <div class="section text-start">
-    <h5 class="accent">Common Mistakes</h5>
-    <small>
-      • Skipping warm-ups or cool-downs.<br>
-      • Overtraining without rest.<br>
-      • Ignoring proper running form.<br>
-      • Poor nutrition affecting energy and recovery.
-    </small>
-  </div>
-
-  <div class="section text-start">
-    <h5 class="accent">Motivation</h5>
-    <small>
-      “Consistency beats intensity. Small, steady improvements lead to big results over time.”
-    </small>
-  </div>
-
-</div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

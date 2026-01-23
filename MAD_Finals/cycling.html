@@ -1,71 +1,101 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cycling</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { background-color: #121212; color: #E5E7EB; }
-    .container { max-width: 420px; margin: auto; padding: 20px; }
-    .accent { color: #FF8A65; } /* orange accent */
-    .card { background: #2A2A2A; border: none; margin-bottom: 20px; }
-    .card img { height: 200px; object-fit: cover; filter: grayscale(20%); }
-    small { color: #9CA3AF; }
-    .section { background: #1E1E1E; padding: 15px; border-radius: 10px; margin-bottom: 15px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #E5E7EB;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-container {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .accent {
+            color: #FF8A65;
+        }
+
+        .card {
+            background: #2A2A2A;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            border-radius: 12px;
+        }
+
+        .section {
+            background: #1E1E1E;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        small {
+            color: #9CA3AF;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container text-center">
-  <h2 class="accent">Cycling</h2>
-  <p><small>Boost your cycling skills, speed, and endurance with these focused steps.</small></p>
+    <div class="app-container container">
 
-  <!-- Single Improvement Card -->
-  <div class="card shadow-sm">
-    <img src="Cycling.jpg" alt="Cycling Training" class="img-fluid">
-    <div class="card-body text-start">
-      <h5 class="accent">Steps to Improve</h5>
-      <small>
-        1. Warm up properly with easy pedaling and stretches.<br>
-        2. Practice pedaling technique for efficiency and cadence.<br>
-        3. Include interval sprints to increase power.<br>
-        4. Work on bike handling: cornering, braking, and balance.<br>
-        5. Strengthen legs and core off the bike with exercises.<br>
-        6. Track your rides and gradually increase distance and intensity.
-      </small>
+        <div class="text-center mb-4">
+            <h2 class="accent">Cycling</h2>
+            <p><small>Boost your cycling skills, speed, and endurance.</small></p>
+        </div>
+
+        <div class="card shadow-sm">
+            <img src="Cycling.jpg" alt="Cycling Training" class="img-fluid">
+            <div class="card-body text-start">
+                <h5 class="accent">Steps to Improve</h5>
+                <small class="d-block">
+                    1. Warm up with easy pedaling.<br>
+                    2. Practice smooth cadence.<br>
+                    3. Add interval sprints.<br>
+                    4. Train hills and climbs.<br>
+                    5. Strengthen legs and core.<br>
+                    6. Track progress weekly.
+                </small>
+            </div>
+        </div>
+
+        <div class="section text-start">
+            <h5 class="accent">Daily Tips</h5>
+            <small>
+                • Maintain proper posture on the bike.<br>
+                • Stretch after every ride.<br>
+                • Stay hydrated.<br>
+                • Ride consistently, not just hard.
+            </small>
+        </div>
+
+        <div class="section text-start">
+            <h5 class="accent">Mindset</h5>
+            <small>
+                “Smooth effort builds lasting endurance.”
+            </small>
+        </div>
+
     </div>
-  </div>
 
-  <!-- Extra Content -->
-  <div class="section text-start">
-    <h5 class="accent">Daily Tips</h5>
-    <small>
-      • Focus on smooth pedal strokes and proper posture.<br>
-      • Practice short bursts of speed regularly.<br>
-      • Include stretching and foam rolling for recovery.<br>
-      • Track performance to see gradual improvement.
-    </small>
-  </div>
-
-  <div class="section text-start">
-    <h5 class="accent">Common Mistakes</h5>
-    <small>
-      • Poor pedaling technique reducing efficiency.<br>
-      • Ignoring bike handling skills.<br>
-      • Overtraining without proper recovery.<br>
-      • Neglecting off-bike strength and core exercises.
-    </small>
-  </div>
-
-  <div class="section text-start">
-    <h5 class="accent">Motivation</h5>
-    <small>
-      “Strong technique and consistent practice make every ride better.”
-    </small>
-  </div>
-
-</div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
