@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> TITE </title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FFC1CC, #FF6F91);
+  overflow: hidden;
+}
+
+/* Step 1 & Step 2 Cards */
+.card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #E63946;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-lg {
+  min-width: 130px;
+  height: 50px;
+}
+
+.button-area {
+  position: relative;
+  margin-top: 25px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#noBtn {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Envelope container */
+.envelope-container {
+  display: none;
+  justify-content: center;
+  align-items: flex-start; /* top aligned for better layout */
+  gap: 30px; /* space between envelope and celebration card */
+  position: relative;
+}
+
+/* Portrait Envelope */
+.envelope {
+  width: 500px;
+  height: 700px;
+  background: #E63946;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.flap {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 0;
+  height: 0;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-bottom: 200px solid #E63946;
+  transform-origin: top center;
+  z-index:2;
+  transition: transform 1s ease;
+}
+
+/* Bigger card inside envelope */
+.card-inside {
+  position: absolute;
+  width: 450px;
+  height: 600px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.card-inside img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Celebration Card (beside envelope) */
+.celebration-card {
+  width: 400px;
+  min-height: 500px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease;
+}
+
+.celebration-card h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #E63946;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.celebration-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+/* Open states */
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+.envelope.open .card-inside {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.envelope.open + .celebration-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- Step 1 -->
+<div class="card text-center" id="step1">
+  <h2>Yo, Ms. Rezas!! </h2>
+  <p>I hope your day is filled with smiles and warmth.</p>
+  <p>Every moment with you makes me happier, and I just wanted to remind you of that.</p>
+  <p>There's a little surprise waiting for you…</p>
+  <button class="btn btn-danger btn-lg mt-3" onclick="showQuestion()">Click for a Surprise 💌</button>
+</div>
+
+<!-- Step 2 -->
+<div class="card text-center d-none" id="step2">
+  <h2>❤️ I Have a Question po ❤️</h2>
+  <p class="fs-5 mb-4">Will you be my Valentine?</p>
+  <div class="button-area">
+    <button class="btn btn-danger btn-lg" id="yesBtn">YES 💕</button>
+    <button class="btn btn-outline-secondary btn-lg" id="noBtn">NO 😢</button>
+  </div>
+</div>
+
+<!-- Step 3: Envelope + Celebration Card -->
+<div class="envelope-container" id="envelopeContainer">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="card-inside">
+      <img src="invitation.jpg" alt="Invitation">
+    </div>
+  </div>
+
+  <!-- Celebration card -->
+  <div class="celebration-card">
+    <h2>YAYYYY! BLEHHHHHH</h2>
+    <p>Thank you for saying YES, Mahal!</p>
+    <p>I can't wait to make this Valentine's Day special with you </p>
+    <p>I may not take you to fancy places, but I promise to make the day happy and memorable.</p>
+    <p>Every moment with you makes me smile more than words can say </p>
+  </div>
+</div>
+
+<script>
+// Step 1 → Step 2
+function showQuestion() {
+  document.getElementById("step1").classList.add("d-none");
+  document.getElementById("step2").classList.remove("d-none");
+}
+
+// NO button dodge logic
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const area = document.querySelector(".button-area");
+
+function moveNoButton() {
+  const areaRect = area.getBoundingClientRect();
+  const yesRect = yesBtn.getBoundingClientRect();
+  const btnWidth = noBtn.offsetWidth;
+  const btnHeight = noBtn.offsetHeight;
+
+  let x, y;
+  let attempts = 0;
+
+  do {
+    x = Math.random() * (area.clientWidth - btnWidth);
+    y = Math.random() * (area.clientHeight - btnHeight);
+    attempts++;
+  } while (rectOverlap(x, y, btnWidth, btnHeight, yesRect, areaRect) && attempts < 100);
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+function rectOverlap(x, y, w, h, yesRect, areaRect) {
+  const yesX = yesRect.left - areaRect.left;
+  const yesY = yesRect.top - areaRect.top;
+  return !(x + w < yesX || x > yesX + yesRect.width || y + h < yesY || y > yesY + yesRect.height);
+}
+
+noBtn.addEventListener("mouseenter", moveNoButton);
+noBtn.addEventListener("click", moveNoButton);
+
+// YES click → show envelope + celebration card
+yesBtn.addEventListener("click", () => {
+  document.getElementById("step2").style.display = "none";
+  const envelopeContainer = document.getElementById("envelopeContainer");
+  envelopeContainer.style.display = "flex";
+  const envelope = document.getElementById("envelope");
+
+  setTimeout(() => {
+    envelope.classList.add('open');
+  }, 300);
+});
+</script>
+
+</body>
+</html>
